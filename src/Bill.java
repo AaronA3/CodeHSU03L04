@@ -17,8 +17,19 @@ class Bill
     //less than 2, nothing extra
     public void addTip()
     {
+        if (totalCustomers >= 8){
+            costOfMeal += costOfMeal * .25;
+        } else if ((totalCustomers >= 4) && (totalCustomers < 8)) {
+            costOfMeal += costOfMeal * .20;
+        } else if ((totalCustomers >= 2) && (totalCustomers < 4)){
+            costOfMeal += costOfMeal * .05;
+        } else {
+            costOfMeal += costOfMeal * 0;
+        }
 
     }
+
+
 
 
     public String toString()
